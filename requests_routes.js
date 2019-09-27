@@ -32,6 +32,18 @@ body.get("/get",function(req,res){
     res.send(Data);
 })
 
+// show data by Id
+body.get("/get/:name",function(req,res){
+    id = req.params.name
+    var data=fs.readFileSync("courses.json")
+    var Data=JSON.parse(data);
+    for (var i in Data){
+        if(Data[i]["name"]==id){
+        console.log(Data[i])
+        res.send(JSON.stringify(Data[i]));
+        }
+    }
+});
 
 
 app.listen(8000, () => console.log('server is listening'));
