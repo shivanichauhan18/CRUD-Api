@@ -1,0 +1,57 @@
+var express = require('express');
+var app = express();
+var fs = require("fs");
+const bodyParser = require('body-parser');
+var body=app.use(bodyParser.json());
+
+// PUT Data-
+
+body.post("/post",function(req,res){
+    var user={
+        name=req.body.name
+
+    }
+})
+
+[
+  {
+    "coursesId": 1,
+    "name": "requests Api calling Again",
+    "description": "This is course we will learn how to get Api. we will get data.",
+    "hint": "sdfghjkdfg",
+    "content": "asdfghjkl;dfghjkldfghjkdfghj",
+    "id": 1
+  },
+  {
+    "coursesId": 1,
+    "name": "requests  Get Slug",
+    "description": "This is course we will learn how to get Slug. we will get Slug.",
+    "hint": "you get data from slug",
+    "content": "yyyyyyyyyyyyyyyyyyyyyyyyyyy",
+    "id": 2
+  },
+  {
+    "coursesId": 2,
+    "name": "Create table",
+    "description": "This is course we will learn how to create table and get data.",
+    "hint": "use solo learn app",
+    "content": "all data store in mysql",
+    "id": 3
+  },
+  {
+    "coursesId": 2,
+    "name": "Create row",
+    "description": "This is course we will learn how to create row and get data.",
+    "hint": "use solo learn app",
+    "content": "all data store in mysql and use app",
+    "id": 4
+  },
+  {
+    "coursesId": 2,
+    "name": "insert data",
+    "description": "This is course we will learn how to insert data in database and get data.",
+    "hint": "use solo learn app",
+    "content": "all data store in mysql and use app",
+    "id": 5
+  }
+// ]

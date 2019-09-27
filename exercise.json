@@ -1,0 +1,114 @@
+[
+  {
+    "coursesId": 1,
+    "name": "python",
+    "description": "This is course we will learn how to learn if condition and flowchart.",
+    "hint": "use basic python course",
+    "content": "fdghjkfghjkfghj",
+    "id": 1
+  },
+  {
+    "coursesId": 1,
+    "name": "loop",
+    "description": "This is course we will learn how to learn loop condition and program.",
+    "hint": "use basic python course",
+    "content": "fdghjkfghjkfghj",
+    "id": 2
+  },
+  {
+    "coursesId": 1,
+    "name": "List",
+    "description": "This is course we will learn how to learn List  and make program by list.",
+    "hint": "use basic python course",
+    "content": "fdghjkfghjkfghj",
+    "id": 3
+  },
+  {
+    "coursesId": 2,
+    "name": "Create table",
+    "description": "This is course we will learn how to create table and get data.",
+    "hint": "use solo learn app",
+    "content": "all data store in mysql",
+    "id": 4
+  },
+  {
+    "coursesId": 2,
+    "name": "Create row",
+    "description": "This is course we will learn how to create row and get data.",
+    "hint": "use solo learn app",
+    "content": "all data store in mysql and use app",
+    "id": 5
+  },
+  {
+    "coursesId": 2,
+    "name": "insert data",
+    "description": "This is course we will learn how to insert data in database and get data.",
+    "hint": "use solo learn app",
+    "content": "all data store in mysql and use app",
+    "id": 6
+  },
+  {
+    "coursesId": 3,
+    "name": "learn basic javaScript",
+    "description": "This is course we will learn javaScript.",
+    "hint": "use free code camp",
+    "content": "dfghjkldfghjkdfghj",
+    "id": 7
+  },
+  {
+    "coursesId": 3,
+    "name": "ES6",
+    "description": "This is course we will learn javaScript.",
+    "hint": "use free code camp",
+    "content": "dfghjkldfghjkdfghjdfghjkl",
+    "id": 8
+  },
+  {
+    "coursesId": 3,
+    "name": "Express js",
+    "description": "This is course we will learn backend.",
+    "hint": "use free code camp",
+    "content": "dfghjkldfghjkdfghjdfghjkl",
+    "id": 9
+  },
+  {
+    "coursesId": 4,
+    "name": "sorting",
+    "description": "This is course we will learn sorting.",
+    "hint": "use geeks for geeks",
+    "content": "dfghjkldfghjkdfgdfghjklhjdfghjkl",
+    "id": 10
+  },
+  {
+    "coursesId": 4,
+    "name": "binary search",
+    "description": "This is course we will learn binary code.",
+    "hint": "use geeks for geeks",
+    "content": "dfghjkldfghjkdfgdfghjklhjdfghjkl",
+    "id": 11
+  },
+  {
+    "coursesId": 5,
+    "name": "adjective",
+    "description": "This is course we will learn adjective.",
+    "hint": "use online",
+    "content": "dfghjkldfghjkdfgdfghjklhjdfghjkl",
+    "id": 12
+  },
+  {
+    "coursesId": 5,
+    "name": "preposition",
+    "description": "This is course we will learn preposition.",
+    "hint": "use online spoken guru",
+    "content": "dfghjkldfghjkdfgdfghjklhjdfghjkl",
+    "id": 13
+  },
+  {
+    "coursesId": 5,
+    "name": "Tenses",
+    "description": "This is course we will learn Tenses.",
+    "hint": "use online spoken guru",
+    "content": "dfghjkldfghjkdfgdfghjklhjdfghjkl",
+    "id": 14
+  }
+]

@@ -75,4 +75,29 @@ body.put("/put/:id",function(req,res){
     return res.json(Data)
 });
 
+// CREATING DATA
+body.post('/exercise/post', function (req, res) {
+    var user = 
+    {       
+           coursesId:req.body.coursesId,
+           name : req.body.name,
+           description : req.body.description,
+           hint:req.body.hint,
+           content:req.body.content
+        }
+     var data=fs.readFileSync("exercise.json") 
+     console.log(data)
+     data = data.toString();
+     var Data = JSON.parse(data);
+     var id=Data.length
+
+     user["id"]=id+1
+     Data.push(user);
+
+     fs.writeFileSync("exercise.json",JSON.stringify(Data,null,2))
+     return res.json(Data)
+ });
+
+
 app.listen(8000, () => console.log('server is listening'));
+

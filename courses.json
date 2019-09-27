@@ -1,18 +1,17 @@
 [
   {
-    "name": "python courses",
-    "description": "This is my python course data",
+    "name": "Basic python ",
+    "description": "This is my python course. we learn many things in python",
     "id": 1
+  },{
+    "name":"mongoDb",
+    "description":"we will learn mongo db",
+    "id":2
   },
   {
-    "name": "recursion Course",
-    "description": "This is recursion course",
-    "id": 2
-  },
-  {
-    "name": "computer Course",
-    "description": "This is computer course. we will learn computer course.",
-    "id": 3
+    "name":"javaScript",
+    "description":"we will learn java Script.",
+    "id":3
   },
   {
     "name": "Data Science",
@@ -30,8 +29,8 @@
     "id": 6
   },
   {
-    "name": "requests Api",
-    "description": "This is computer course. we will learn computer course.",
+    "name": "Requests Course",
+    "description": "IN THIS WILL LEARN Api call and how to do requests server and how data will come and how data convert in json",
     "id": 7
   },
   {
@@ -39,11 +38,9 @@
     "description": "IN THIS WILL LEARN HTML",
     "id": 8
   },
-  {
-    "name": "AI",
-    "description": "WE will learn machine learning.",
-    "id": 9
-  },
+  {"name":"AI",
+  "description":"WE will learn machine learning.",
+"id":9},
   {
     "name": "java",
     "description": "IN THIS WILL LEARN java .",
