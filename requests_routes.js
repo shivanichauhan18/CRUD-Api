@@ -61,6 +61,18 @@ body.delete("/delete/:id",function(req,res){
     };
 });
 
+// put data
+body.put("/put/:id",function(req,res){
+    id=req.params.id-1;
+    var data=fs.readFileSync("courses.json")
+    var Data=JSON.parse(data);
 
+    Data[id]["name"]=req.body.name;
+    Data[id]["description"]=req.body.description
+
+    fs.writeFileSync("courses.json",JSON.stringify(Data,null,2))
+    console.log(Data);
+    return res.json(Data)
+});
 
 app.listen(8000, () => console.log('server is listening'));
