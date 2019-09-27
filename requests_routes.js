@@ -23,4 +23,15 @@ body.post('/post', function (req, res) {
      return res.json(Data)
  });
 
+// Read data
+
+body.get("/get",function(req,res){
+    var data=fs.readFileSync("courses.json")
+    var Data = JSON.parse( data );
+    console.log(Data);
+    res.send(Data);
+})
+
+
+
 app.listen(8000, () => console.log('server is listening'));
