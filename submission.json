@@ -105,29 +105,3 @@
     "exerciseId": 3
   }
 ]
-
-body.post("/courses/:courseId/exercise/:id",function(req,res){
-    var cId =req.params.courseId;
-    var eid=req.params.id;
-    var user = 
-    {       
-           codeUrl : req.body.codeUrl,
-           userName : req.body.userName,
-        }
-
-    var data=fs.readFileSync("submission.json");
-    data = data.toString();
-    var Data = JSON.parse(data);
-    var id=Data.length
-     
-    integerId=parseInt(eid,10)
-    intCourseId=parseInt(cId,10)
-    user["submissionId"]=id+1
-    user["courseId"]=intCourseId;
-    user["exerciseId"]=integerId
-    Data.push(user);
-
-    fs.writeFileSync("submission.json",JSON.stringify(Data,null,2))
-    return res.json(Data)
-
-})
