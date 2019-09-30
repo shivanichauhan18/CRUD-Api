@@ -98,6 +98,89 @@ body.post('/exercise/post', function (req, res) {
      return res.json(Data)
  });
 
+app.get("/exercise/get",function(req,res){
+    data=fs.readFileSync("exercise.json")
+    var Data=JSON.parse(data);
+    console.log(Data);
+    return res.send(Data)
+})
+
+app.get("/exercise/get/:id",function(req,res){
+    CoursesId=req.params.id;
+    mainData=[];
+    var data=fs.readFileSync("exercise.json")
+    var Data=JSON.parse(data)
+    for (var i in Data){
+        if (Data[i]["coursesId"]==CoursesId){
+            console.log(Data[i]);
+            mainData.push(Data[i]);
+        }
+    }res.json(mainData);
+});
+
+body.get("/courses/:courseID/exercise/:id",function(req,res){
+    var courseId=req.params.courseID;
+    var data=fs.readFileSync("exercise.json")
+    var Data=JSON.parse(data);
+    for(var i in Data){
+        if (Data[i]["coursesId"] == courseId){
+            var id=req.params.id;
+            for (var j in Data){
+                if (Data[j]["id"] == id && Data[j]["coursesId"] == courseId){
+                var exercisData = (Data[j])
+                res.send(JSON.stringify(exercisData))
+            }
+        }
+    }
+    }
+    res.end("Data not found")
+
+});
+
+
+body.put("/courses/:courseId/exercise/:id",function(req,res){
+    courseID=req.params.CoursesId;
+    id=req.params.id;
+    var data=fs.readFileSync("exercise.json")
+    var Data=JSON.parse(data)  
+    for (var i in Data){
+        if (Data[i]["coursesId"] == courseID && Data[i]["id"] == id){
+        Data[id]["name"]=req.body.name;
+        Data[id]["description"]=req.body.description;    
+        fs.writeFileSync("exercise.json",null,2)
+        res.send(Data)
+
+        }
+    }
+});
+
+body.post("/courses/:courseId/exercise/:id",function(req,res){
+    var cId =req.params.courseId;
+    var eid=req.params.id;
+    var user = 
+    {       
+           codeUrl : req.body.codeUrl,
+           userName : req.body.userName,
+        }
+
+    var data=fs.readFileSync("submission.json");
+    data = data.toString();
+    var Data = JSON.parse(data);
+    var id=Data.length
+     
+    integerId=parseInt(eid,10)
+    intCourseId=parseInt(cId,10)
+    user["submissionId"]=id+1
+    user["courseId"]=intCourseId;
+    user["exerciseId"]=integerId
+    Data.push(user);
+
+    fs.writeFileSync("submission.json",JSON.stringify(Data,null,2))
+    return res.json(Data)
+
+})
+
+
 
 app.listen(8000, () => console.log('server is listening'));
 
