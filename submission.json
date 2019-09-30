@@ -1,0 +1,133 @@
+[
+  {
+    "codeUrl": "web devlopment",
+    "userName": "saloni",
+    "submissionId": 1,
+    "courseId": 3,
+    "exerciseId": 1
+  },
+  {
+    "codeUrl": "express js devlopment",
+    "userName": "shivi",
+    "submissionId": 2,
+    "courseId": 3,
+    "exerciseId": 2
+  },
+  {
+    "codeUrl": "react js",
+    "userName": "shivani jaiswal",
+    "submissionId": 3,
+    "courseId": 3,
+    "exerciseId": 4
+  },
+  {
+    "codeUrl": "angular js",
+    "userName": "anjali patil",
+    "submissionId": 4,
+    "courseId": 3,
+    "exerciseId": 4
+  },
+  {
+    "codeUrl": "java",
+    "userName": "rahul joshi",
+    "submissionId": 5,
+    "courseId": 1,
+    "exerciseId": 1
+  },
+  {
+    "codeUrl": "updated node js",
+    "userName": "sapna visnoi",
+    "submissionId": 6,
+    "courseId": 1,
+    "exerciseId": 1
+  },
+  {
+    "codeUrl": "native react",
+    "userName": "Pavan vishwkarma",
+    "submissionId": 7,
+    "courseId": 2,
+    "exerciseId": 1
+  },
+  {
+    "codeUrl": "web devloper",
+    "userName": "anjali sen",
+    "submissionId": 8,
+    "courseId": 2,
+    "exerciseId": 2
+  },
+  {
+    "codeUrl": "python devloper",
+    "userName": "sonam goud",
+    "submissionId": 9,
+    "courseId": 2,
+    "exerciseId": 3
+  },
+  {
+    "codeUrl": "data base devloper",
+    "userName": "pratyush",
+    "submissionId": 10,
+    "courseId": 2,
+    "exerciseId": 4
+  },
+  {
+    "codeUrl": "front tend devloper",
+    "userName": "Amar",
+    "submissionId": 11,
+    "courseId": 4,
+    "exerciseId": 1
+  },
+  {
+    "codeUrl": "front tend devloper",
+    "userName": "Amar",
+    "submissionId": 12,
+    "courseId": 4,
+    "exerciseId": 1
+  },
+  {
+    "codeUrl": "front tend devloper",
+    "userName": "Amar",
+    "submissionId": 13,
+    "courseId": 4,
+    "exerciseId": 2
+  },
+  {
+    "codeUrl": "front tend devloper",
+    "userName": "Diwakar",
+    "submissionId": 14,
+    "courseId": 4,
+    "exerciseId": 4
+  },
+  {
+    "codeUrl": "backend devloper",
+    "userName": "Dipa",
+    "submissionId": 15,
+    "courseId": 4,
+    "exerciseId": 3
+  }
+]
+
+body.post("/courses/:courseId/exercise/:id",function(req,res){
+    var cId =req.params.courseId;
+    var eid=req.params.id;
+    var user = 
+    {       
+           codeUrl : req.body.codeUrl,
+           userName : req.body.userName,
+        }
+
+    var data=fs.readFileSync("submission.json");
+    data = data.toString();
+    var Data = JSON.parse(data);
+    var id=Data.length
+     
+    integerId=parseInt(eid,10)
+    intCourseId=parseInt(cId,10)
+    user["submissionId"]=id+1
+    user["courseId"]=intCourseId;
+    user["exerciseId"]=integerId
+    Data.push(user);
+
+    fs.writeFileSync("submission.json",JSON.stringify(Data,null,2))
+    return res.json(Data)
+
+})

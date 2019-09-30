@@ -178,7 +178,15 @@ body.post("/courses/:courseId/exercise/:id",function(req,res){
     fs.writeFileSync("submission.json",JSON.stringify(Data,null,2))
     return res.json(Data)
 
-})
+        
+    })
+//     body.get("/courses",function(req,res){
+//         var data=fs.readFileSync("submission.json")
+//         var Data=JSON.parse(data)
+//         console.log(Data)
+//         res.json(Data)
+
+// })
 
 
 
